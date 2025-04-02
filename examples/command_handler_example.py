@@ -1,8 +1,8 @@
 import rx
 from rx import Observable
 
-from ..src.core.command.command import Command
-from ..src.core.command.python_bean_command_support import command_handler, create_python_bean_command_support
+from src.core.command.command import Command
+from src.core.command.python_bean_command_support import command_handler, create_python_bean_command_support
 
 
 class MathCommands:
