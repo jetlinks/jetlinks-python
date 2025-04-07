@@ -1,7 +1,7 @@
 from typing import Dict, Any
 from abc import ABC, abstractmethod
 
-from jetlinks_plugin.core.plugin import PluginType, Plugin, PluginContext
+from plugin import PluginType, Plugin, PluginContext
 
 
 class PluginDriver(ABC):
@@ -103,7 +103,7 @@ class BasePlugin(Plugin):
     
     def start(self) -> None:
         """启动插件"""
-        self.context.monitor().log_info("插件启动中...")
+        self.context.monitor().logger().info("插件启动中...")
         self.running = True
         self.context.monitor().log_info("插件已启动")
         
